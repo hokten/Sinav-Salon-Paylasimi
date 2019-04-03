@@ -2,10 +2,13 @@
 using AspNetCoreMvcIdentity.Models;
 using AspNetCoreMvcIdentity.Models.AccountViewModels;
 using AspNetCoreMvcIdentity.Services;
+using AspNetCoreMvcIdentity.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Security.Claims;
@@ -21,17 +24,21 @@ namespace AspNetCoreMvcIdentity.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
+        private readonly ApplicationDbContext _context;
+
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             IEmailSender emailSender,
+            ApplicationDbContext context,
             ILogger<AccountController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
+            _context = context;
         }
 
         [TempData]
@@ -205,6 +212,7 @@ namespace AspNetCoreMvcIdentity.Controllers
         [AllowAnonymous]
         public IActionResult Register(string returnUrl = null)
         {
+          ViewData["Bolumler"] = new SelectList(_context.Bolum, "BolumId", "BolumAdi");
             ViewData["ReturnUrl"] = returnUrl;
             return View();
         }
@@ -217,7 +225,7 @@ namespace AspNetCoreMvcIdentity.Controllers
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, BolumId = Convert.ToInt32(model.Bolum)  };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

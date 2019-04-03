@@ -1,0 +1,59 @@
+@model IEnumerable<AspNetCoreMvcIdentity.Models.Sinav>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Oturum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ders)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DersSorumlusu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gozetmen)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Oturum.OturumId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salon.SalonId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ders.DersId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DersSorumlusu.OgretimElemaniId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gozetmen.OgretimElemaniId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.SinavId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.SinavId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.SinavId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

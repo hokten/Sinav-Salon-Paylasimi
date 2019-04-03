@@ -20,6 +20,10 @@ namespace AspNetCoreMvcIdentity.Models.ManageViewModels
         [Display(Name = "Phone number")]
         public string PhoneNumber { get; set; }
 
+        [Display(Name = "Bölümü")]
+        public string Bolum { get; set; }
+
+
         public string StatusMessage { get; set; }
     }
 }

@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Identity;
 
 namespace AspNetCoreMvcIdentity.Models
 {
-    // Add profile data for application users by adding properties to the ApplicationUser class
-    public class ApplicationUser : IdentityUser<long>
-    {
-    }
+  // Add profile data for application users by adding properties to the ApplicationUser class
+  public class ApplicationUser : IdentityUser<long>
+  {
+    public virtual int BolumId { get; set;}
+    public virtual Bolum Bolum { get; set;}
+  }
 }

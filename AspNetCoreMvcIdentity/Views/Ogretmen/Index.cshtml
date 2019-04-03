@@ -1,0 +1,28 @@
+@model AspNetCoreMvcIdentity.Models.ViewModels.Ogretmen
+
+@{
+    ViewData["Title"] = "Index";
+    }
+
+  <select class="selectpicker" multiple>
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Barbecue</option>
+</select>
+
+<div class="row">
+  <div class="col-sm-5">
+    <div class="form-group">
+@Html.ListBoxFor(
+x => x.SecilenBolumler, 
+new MultiSelectList(Model.TumBolumler, "BolumId", "BolumAdi" ),
+new { @class = "selectpicker form-control", multiple = "true"} )
+
+
+
+    </div>
+  </div>
+</div>    
+@section Scripts {
+  }
+

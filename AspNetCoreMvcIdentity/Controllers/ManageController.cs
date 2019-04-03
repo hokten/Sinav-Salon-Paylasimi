@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Options;
 using AspNetCoreMvcIdentity.Models;
 using AspNetCoreMvcIdentity.Models.ManageViewModels;
 using AspNetCoreMvcIdentity.Services;
+using AspNetCoreMvcIdentity.Data;
 
 namespace AspNetCoreMvcIdentity.Controllers
 {
@@ -26,6 +28,7 @@ namespace AspNetCoreMvcIdentity.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ILogger _logger;
         private readonly UrlEncoder _urlEncoder;
+        private readonly ApplicationDbContext _context;
 
         private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
         private const string RecoveryCodesKey = nameof(RecoveryCodesKey);
@@ -35,13 +38,15 @@ namespace AspNetCoreMvcIdentity.Controllers
           SignInManager<ApplicationUser> signInManager,
           IEmailSender emailSender,
           ILogger<ManageController> logger,
-          UrlEncoder urlEncoder)
+          UrlEncoder urlEncoder,
+          ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _emailSender = emailSender;
             _logger = logger;
             _urlEncoder = urlEncoder;
+            _context = context;
         }
 
         [TempData]
@@ -50,7 +55,7 @@ namespace AspNetCoreMvcIdentity.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var user = await _userManager.GetUserAsync(User);
+            var user = await _userManager.Users.Include(x => x.Bolum).SingleAsync(x => x.Id == Convert.ToInt32(_userManager.GetUserId(User)));
             if (user == null)
             {
                 throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
@@ -58,12 +63,19 @@ namespace AspNetCoreMvcIdentity.Controllers
 
             var model = new IndexViewModel
             {
+              Bolum = user.Bolum.BolumAdi,
                 Username = user.UserName,
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 IsEmailConfirmed = user.EmailConfirmed,
                 StatusMessage = StatusMessage
             };
+            List<int> programlar = _context.Program.Where(p => p.BolumId == user.Bolum.BolumId).Select(z => z.ProgramId).ToList();
+          ICollection<Ders> dersler = _context.Ders.Where(x => programlar.Contains(x.ProgramId)).ToList();
+                var personsDump = ObjectDumper.Dump(dersler);
+                    Console.WriteLine(personsDump);
+
+
 
             return View(model);
         }

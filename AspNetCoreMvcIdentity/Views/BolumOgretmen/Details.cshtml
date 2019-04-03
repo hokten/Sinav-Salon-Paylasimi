@@ -1,0 +1,30 @@
+@model AspNetCoreMvcIdentity.Models.BolumOgretmen
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BolumOgretmen</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bolum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bolum.BolumId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.OgretimElemani)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.OgretimElemani.OgretimElemaniId)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -3,7 +3,6 @@ using System;
 using AspNetCoreMvcIdentity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AspNetCoreMvcIdentity.Migrations
@@ -15,15 +14,12 @@ namespace AspNetCoreMvcIdentity.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "2.2.3-servicing-35854");
 
             modelBuilder.Entity("AspNetCoreMvcIdentity.Models.ApplicationRole", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
@@ -38,8 +34,7 @@ namespace AspNetCoreMvcIdentity.Migrations
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
-                        .HasName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
+                        .HasName("RoleNameIndex");
 
                     b.ToTable("AspNetRoles");
                 });
@@ -47,10 +42,11 @@ namespace AspNetCoreMvcIdentity.Migrations
             modelBuilder.Entity("AspNetCoreMvcIdentity.Models.ApplicationUser", b =>
                 {
                     b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<int>("AccessFailedCount");
+
+                    b.Property<int>("BolumId");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
@@ -85,22 +81,157 @@ namespace AspNetCoreMvcIdentity.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BolumId");
+
                     b.HasIndex("NormalizedEmail")
                         .HasName("EmailIndex");
 
                     b.HasIndex("NormalizedUserName")
                         .IsUnique()
-                        .HasName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+                        .HasName("UserNameIndex");
 
                     b.ToTable("AspNetUsers");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Bolum", b =>
+                {
+                    b.Property<int>("BolumId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("BolumAdi");
+
+                    b.HasKey("BolumId");
+
+                    b.ToTable("Bolum");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.BolumOgretmen", b =>
+                {
+                    b.Property<int>("BolumId");
+
+                    b.Property<int>("OgretimElemaniId");
+
+                    b.HasKey("BolumId", "OgretimElemaniId");
+
+                    b.HasIndex("OgretimElemaniId");
+
+                    b.ToTable("BolumOgretmen");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Ders", b =>
+                {
+                    b.Property<int>("DersId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("DersAdi");
+
+                    b.Property<string>("DersKodu");
+
+                    b.Property<int?>("ParentDersId");
+
+                    b.Property<int>("ProgramId");
+
+                    b.HasKey("DersId");
+
+                    b.HasIndex("ParentDersId");
+
+                    b.HasIndex("ProgramId");
+
+                    b.ToTable("Ders");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.OgretimElemani", b =>
+                {
+                    b.Property<int>("OgretimElemaniId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("OgretimElemaniAdiSoyadi");
+
+                    b.Property<string>("OgretimElemaniKisaltmaa");
+
+                    b.HasKey("OgretimElemaniId");
+
+                    b.ToTable("OgretimElemani");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Oturum", b =>
+                {
+                    b.Property<int>("OturumId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("OturumTarihveSaati");
+
+                    b.Property<int?>("SalonId");
+
+                    b.HasKey("OturumId");
+
+                    b.HasIndex("SalonId");
+
+                    b.ToTable("Oturum");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Program", b =>
+                {
+                    b.Property<int>("ProgramId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("BolumId");
+
+                    b.Property<string>("ProgramAdi");
+
+                    b.HasKey("ProgramId");
+
+                    b.HasIndex("BolumId");
+
+                    b.ToTable("Program");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Salon", b =>
+                {
+                    b.Property<int>("SalonId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("SalonAdi");
+
+                    b.HasKey("SalonId");
+
+                    b.ToTable("Salon");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Sinav", b =>
+                {
+                    b.Property<int>("SinavId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("DersId");
+
+                    b.Property<int>("DersSorumlusuId");
+
+                    b.Property<int>("GozetmenId");
+
+                    b.Property<int>("OturumId");
+
+                    b.Property<int>("SalonId");
+
+                    b.HasKey("SinavId");
+
+                    b.HasIndex("DersId");
+
+                    b.HasIndex("DersSorumlusuId");
+
+                    b.HasIndex("GozetmenId");
+
+                    b.HasIndex("OturumId");
+
+                    b.HasIndex("SalonId");
+
+                    b.ToTable("Sinav");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ClaimType");
 
@@ -118,8 +249,7 @@ namespace AspNetCoreMvcIdentity.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<long>", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("ClaimType");
 
@@ -177,6 +307,82 @@ namespace AspNetCoreMvcIdentity.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Bolum", "Bolum")
+                        .WithMany()
+                        .HasForeignKey("BolumId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.BolumOgretmen", b =>
+                {
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Bolum", "Bolum")
+                        .WithMany("BolumOgretimElemanlari")
+                        .HasForeignKey("BolumId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AspNetCoreMvcIdentity.Models.OgretimElemani", "OgretimElemani")
+                        .WithMany("OgretimElemanininBolumleri")
+                        .HasForeignKey("OgretimElemaniId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Ders", b =>
+                {
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Ders", "Parent")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentDersId");
+
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Program", "Program")
+                        .WithMany()
+                        .HasForeignKey("ProgramId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Oturum", b =>
+                {
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Salon")
+                        .WithMany("Oturum")
+                        .HasForeignKey("SalonId");
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Program", b =>
+                {
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Bolum", "Bolum")
+                        .WithMany("Programlar")
+                        .HasForeignKey("BolumId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("AspNetCoreMvcIdentity.Models.Sinav", b =>
+                {
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Ders", "Ders")
+                        .WithMany()
+                        .HasForeignKey("DersId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AspNetCoreMvcIdentity.Models.OgretimElemani", "DersSorumlusu")
+                        .WithMany()
+                        .HasForeignKey("DersSorumlusuId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AspNetCoreMvcIdentity.Models.OgretimElemani", "Gozetmen")
+                        .WithMany()
+                        .HasForeignKey("GozetmenId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Oturum", "Oturum")
+                        .WithMany("Sinav")
+                        .HasForeignKey("OturumId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AspNetCoreMvcIdentity.Models.Salon", "Salon")
+                        .WithMany()
+                        .HasForeignKey("SalonId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>

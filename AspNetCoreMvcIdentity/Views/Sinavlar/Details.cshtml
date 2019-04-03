@@ -1,0 +1,48 @@
+@model AspNetCoreMvcIdentity.Models.Sinav
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sinav</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Oturum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Oturum.OturumId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Salon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Salon.SalonId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Ders)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ders.DersId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DersSorumlusu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DersSorumlusu.OgretimElemaniId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gozetmen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gozetmen.OgretimElemaniId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SinavId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b0b154ee-94c9-4a38-a493-9ab42466b3c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/ManageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/ManageController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Migrations/20181223173756_InitialMigration.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Migrations/20181223173756_InitialMigration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Models/AccountViewModels/RegisterViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Models/AccountViewModels/RegisterViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Models/ApplicationUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Models/ApplicationUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Models/ManageViewModels/IndexViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Models/ManageViewModels/IndexViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Account/Register.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Manage/ChangePassword.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Manage/ChangePassword.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Manage/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Manage/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/bin/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/AspNetCoreMvcIdentity.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/AspNetCoreMvcIdentity.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/AspNetCoreMvcIdentity.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/AspNetCoreMvcIdentity.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/AspNetCoreMvcIdentity.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/AspNetCoreMvcIdentity.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.dll" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/AspNetCoreMvcIdentity.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/AccessDenied.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/ConfirmEmail.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/ExternalLogin.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/ForgotPassword.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/ForgotPasswordConfirmation.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/Lockout.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/LoginWith2fa.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/LoginWithRecoveryCode.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/Register.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/ResetPassword.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/ResetPasswordConfirmation.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Account/SignedOut.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/ChangePassword.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/Disable2fa.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/EnableAuthenticator.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/ExternalLogins.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/GenerateRecoveryCodes.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/Index.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/ResetAuthenticator.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/SetPassword.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/ShowRecoveryCodes.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/TwoFactorAuthentication.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/_Layout.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/_ManageNav.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/_StatusMessage.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Manage/_ViewImports.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_LoginPartial.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetCoreMvcIdentity/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/wwwroot/css/site.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/OgretmenController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <marker date="1553983443657" expanded="false" signature="6:349" ph="..." />
+                <marker date="1553983443657" expanded="true" signature="394:2952" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="443:2950" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="560:598" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="687:1629" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="888:1137" ph="/* ogretimElemani.OgretimElemanininBolumleri.Clear(); ... */" />
+                <marker date="1553983443657" expanded="true" signature="1339:1382" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="1842:2939" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="1897:1940" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="2188:2260" ph="{...}" />
+                <marker date="1553983443657" expanded="true" signature="2320:2473" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/OgretmenController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="2" />
+    <option name="y" value="38" />
+    <option name="width" value="1358" />
+    <option name="height" value="724" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="AspNetCoreMvcIdentity" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="AspNetCoreMvcIdentity" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AspNetCoreMvcIdentity" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="AspNetCoreMvcIdentity" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AspNetCoreMvcIdentity" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="AspNetCoreMvcIdentity" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="AspNetCoreMvcIdentity" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0b154ee-94c9-4a38-a493-9ab42466b3c5" name="Default Changelist" comment="" />
+      <created>1554038624437</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554038624437</updated>
+      <workItem from="1554038639956" duration="86000" />
+      <workItem from="1554038873101" duration="749000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="835000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="2" y="38" width="1358" height="724" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25381097" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="REST Client" />
+      <window_info anchor="bottom" id="Build" weight="0.3296" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3296" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.9077744" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Unit Tests" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.09222561" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/OgretmenController.cs</url>
+          <line>87</line>
+          <properties documentPath="$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/OgretmenController.cs" initialLine="87">
+            <startOffsets>
+              <option value="2800" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2851" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AspNetCoreMvcIdentity/Controllers/OgretmenController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <marker date="1553983443657" expanded="false" signature="6:349" ph="..." />
+            <marker date="1553983443657" expanded="true" signature="394:2952" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="443:2950" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="560:598" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="687:1629" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="888:1137" ph="/* ogretimElemani.OgretimElemanininBolumleri.Clear(); ... */" />
+            <marker date="1553983443657" expanded="true" signature="1339:1382" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="1842:2939" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="1897:1940" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="2188:2260" ph="{...}" />
+            <marker date="1553983443657" expanded="true" signature="2320:2473" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

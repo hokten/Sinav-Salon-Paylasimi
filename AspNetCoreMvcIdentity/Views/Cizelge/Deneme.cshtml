@@ -1,0 +1,35 @@
+@model IEnumerable<IGrouping<DateTime, IGrouping<DateTime, AspNetCoreMvcIdentity.Models.ViewModels.SinavDTO>>>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+
+
+@{
+ViewData["Title"] = "Index";
+int KullaniciBolumId = UserManager.GetUserAsync(User).Result.Bolum.BolumId;
+DateTime? tarih_satiri = null;
+}
+
+<table border="1">
+@{
+    var i=0;
+    foreach(var satir in Model) {
+        i = 0;
+        foreach(var sinav in satir) {
+            if( i == 0 ) {
+                @:<tr><td rowspan="@(satir.Count())">@(satir.Key.ToString())</td>
+            }
+            else {
+                @:<tr>
+
+            }
+            @:<td>@(sinav.Key.ToString())</td>
+            foreach(var si in sinav) {
+                @:<td>@(si.Salon.SalonAdi)</td>
+            }
+            @:</tr>
+            i++;
+        }
+    }
+}
+</table>
+

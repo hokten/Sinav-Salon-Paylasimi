@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_AspNetCoreMvcIdentity.-85150384.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="AspNetCoreMvcIdentity" t="IncludeRecursive">
+        <e p="AspNetCoreMvcIdentity.csproj" t="IncludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AccountController.cs" t="Include" />
+          <e p="BolumOgretmenController.cs" t="Include" />
+          <e p="BolumlerController.cs" t="Include" />
+          <e p="CizelgeController.cs" t="Include" />
+          <e p="DerslerController.cs" t="Include" />
+          <e p="HomeController.cs" t="Include" />
+          <e p="ManageController.cs" t="Include" />
+          <e p="OgretimElemaniController.cs" t="Include" />
+          <e p="OgretmenController.cs" t="Include" />
+          <e p="OturumlarController.cs" t="Include" />
+          <e p="ProgramlarController.cs" t="Include" />
+          <e p="SalonlarController.cs" t="Include" />
+          <e p="SinavlarController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="ApplicationDbContext.cs" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="EmailSenderExtensions.cs" t="Include" />
+          <e p="UrlHelperExtensions.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20190329114804_ilk.Designer.cs" t="Include" />
+          <e p="20190329114804_ilk.cs" t="Include" />
+          <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="AccountViewModels" t="Include">
+            <e p="ExternalLoginViewModel.cs" t="Include" />
+            <e p="ForgotPasswordViewModel.cs" t="Include" />
+            <e p="LoginViewModel.cs" t="Include" />
+            <e p="LoginWith2faViewModel.cs" t="Include" />
+            <e p="LoginWithRecoveryCodeViewModel.cs" t="Include" />
+            <e p="RegisterViewModel.cs" t="Include" />
+            <e p="ResetPasswordViewModel.cs" t="Include" />
+          </e>
+          <e p="ApplicationRole.cs" t="Include" />
+          <e p="ApplicationUser.cs" t="Include" />
+          <e p="Bolum.cs" t="Include" />
+          <e p="BolumOgretmen.cs" t="Include" />
+          <e p="Ders.cs" t="Include" />
+          <e p="ErrorViewModel.cs" t="Include" />
+          <e p="ManageViewModels" t="Include">
+            <e p="ChangePasswordViewModel.cs" t="Include" />
+            <e p="EnableAuthenticatorViewModel.cs" t="Include" />
+            <e p="ExternalLoginsViewModel.cs" t="Include" />
+            <e p="IndexViewModel.cs" t="Include" />
+            <e p="RemoveLoginViewModel.cs" t="Include" />
+            <e p="SetPasswordViewModel.cs" t="Include" />
+            <e p="ShowRecoveryCodesViewModel.cs" t="Include" />
+            <e p="TwoFactorAuthenticationViewModel.cs" t="Include" />
+          </e>
+          <e p="OgretimElemani.cs" t="Include" />
+          <e p="Oturum.cs" t="Include" />
+          <e p="Program.cs" t="Include" />
+          <e p="Salon.cs" t="Include" />
+          <e p="Sinav.cs" t="Include" />
+          <e p="ViewModels" t="Include">
+            <e p="Cizelge.cs" t="Include" />
+            <e p="Ogretmen.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="EmailSender.cs" t="Include" />
+          <e p="IEmailSender.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Veritabani.db" t="Include" />
+        <e p="Views" t="Include">
+          <e p="Account" t="Include">
+            <e p="AccessDenied.cshtml" t="Include" />
+            <e p="ConfirmEmail.cshtml" t="Include" />
+            <e p="ExternalLogin.cshtml" t="Include" />
+            <e p="ForgotPassword.cshtml" t="Include" />
+            <e p="ForgotPasswordConfirmation.cshtml" t="Include" />
+            <e p="Lockout.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
+            <e p="LoginWith2fa.cshtml" t="Include" />
+            <e p="LoginWithRecoveryCode.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+            <e p="ResetPassword.cshtml" t="Include" />
+            <e p="ResetPasswordConfirmation.cshtml" t="Include" />
+            <e p="SignedOut.cshtml" t="Include" />
+          </e>
+          <e p="BolumOgretmen" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Bolumler" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Cizelge" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Dersler" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+            <e p="Privacy.cshtml" t="Include" />
+          </e>
+          <e p="Manage" t="Include">
+            <e p="ChangePassword.cshtml" t="Include" />
+            <e p="Disable2fa.cshtml" t="Include" />
+            <e p="EnableAuthenticator.cshtml" t="Include" />
+            <e p="ExternalLogins.cshtml" t="Include" />
+            <e p="GenerateRecoveryCodes.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="ManageNavPages.cs" t="Include" />
+            <e p="ResetAuthenticator.cshtml" t="Include" />
+            <e p="SetPassword.cshtml" t="Include" />
+            <e p="ShowRecoveryCodes.cshtml" t="Include" />
+            <e p="TwoFactorAuthentication.cshtml" t="Include" />
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ManageNav.cshtml" t="Include" />
+            <e p="_StatusMessage.cshtml" t="Include" />
+            <e p="_ViewImports.cshtml" t="Include" />
+          </e>
+          <e p="OgretimElemani" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Ogretmen" t="Include">
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Oturumlar" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Programlar" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Salonlar" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="Error.cshtml" t="Include" />
+            <e p="_CookieConsentPartial.cshtml" t="Include" />
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_LoginPartial.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+          </e>
+          <e p="Sinavlar" t="Include">
+            <e p="Create.cshtml" t="Include" />
+            <e p="Delete.cshtml" t="Include" />
+            <e p="Details.cshtml" t="Include" />
+            <e p="Edit.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+        </e>
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="AspNetCoreMvcIdentity.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="bootstrap-select.min.css" t="Include" />
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="js" t="Include">
+            <e p="bootstrap-select.min.js" t="Include" />
+            <e p="i18n" t="Include">
+              <e p="defaults-am_ET.js" t="Include" />
+              <e p="defaults-am_ET.js.map" t="Include" />
+              <e p="defaults-am_ET.min.js" t="Include" />
+              <e p="defaults-ar_AR.js" t="Include" />
+              <e p="defaults-ar_AR.js.map" t="Include" />
+              <e p="defaults-ar_AR.min.js" t="Include" />
+              <e p="defaults-bg_BG.js" t="Include" />
+              <e p="defaults-bg_BG.js.map" t="Include" />
+              <e p="defaults-bg_BG.min.js" t="Include" />
+              <e p="defaults-cs_CZ.js" t="Include" />
+              <e p="defaults-cs_CZ.js.map" t="Include" />
+              <e p="defaults-cs_CZ.min.js" t="Include" />
+              <e p="defaults-da_DK.js" t="Include" />
+              <e p="defaults-da_DK.js.map" t="Include" />
+              <e p="defaults-da_DK.min.js" t="Include" />
+              <e p="defaults-de_DE.js" t="Include" />
+              <e p="defaults-de_DE.js.map" t="Include" />
+              <e p="defaults-de_DE.min.js" t="Include" />
+              <e p="defaults-en_US.js" t="Include" />
+              <e p="defaults-en_US.js.map" t="Include" />
+              <e p="defaults-en_US.min.js" t="Include" />
+              <e p="defaults-es_CL.js" t="Include" />
+              <e p="defaults-es_CL.js.map" t="Include" />
+              <e p="defaults-es_CL.min.js" t="Include" />
+              <e p="defaults-es_ES.js" t="Include" />
+              <e p="defaults-es_ES.js.map" t="Include" />
+              <e p="defaults-es_ES.min.js" t="Include" />
+              <e p="defaults-et_EE.js" t="Include" />
+              <e p="defaults-et_EE.js.map" t="Include" />
+              <e p="defaults-et_EE.min.js" t="Include" />
+              <e p="defaults-eu.js" t="Include" />
+              <e p="defaults-eu.js.map" t="Include" />
+              <e p="defaults-eu.min.js" t="Include" />
+              <e p="defaults-fa_IR.js" t="Include" />
+              <e p="defaults-fa_IR.js.map" t="Include" />
+              <e p="defaults-fa_IR.min.js" t="Include" />
+              <e p="defaults-fi_FI.js" t="Include" />
+              <e p="defaults-fi_FI.js.map" t="Include" />
+              <e p="defaults-fi_FI.min.js" t="Include" />
+              <e p="defaults-fr_FR.js" t="Include" />
+              <e p="defaults-fr_FR.js.map" t="Include" />
+              <e p="defaults-fr_FR.min.js" t="Include" />
+              <e p="defaults-hr_HR.js" t="Include" />
+              <e p="defaults-hr_HR.js.map" t="Include" />
+              <e p="defaults-hr_HR.min.js" t="Include" />
+              <e p="defaults-hu_HU.js" t="Include" />
+              <e p="defaults-hu_HU.js.map" t="Include" />
+              <e p="defaults-hu_HU.min.js" t="Include" />
+              <e p="defaults-id_ID.js" t="Include" />
+              <e p="defaults-id_ID.js.map" t="Include" />
+              <e p="defaults-id_ID.min.js" t="Include" />
+              <e p="defaults-it_IT.js" t="Include" />
+              <e p="defaults-it_IT.js.map" t="Include" />
+              <e p="defaults-it_IT.min.js" t="Include" />
+              <e p="defaults-ja_JP.js" t="Include" />
+              <e p="defaults-ja_JP.js.map" t="Include" />
+              <e p="defaults-ja_JP.min.js" t="Include" />
+              <e p="defaults-kh_KM.js" t="Include" />
+              <e p="defaults-kh_KM.js.map" t="Include" />
+              <e p="defaults-kh_KM.min.js" t="Include" />
+              <e p="defaults-ko_KR.js" t="Include" />
+              <e p="defaults-ko_KR.js.map" t="Include" />
+              <e p="defaults-ko_KR.min.js" t="Include" />
+              <e p="defaults-lt_LT.js" t="Include" />
+              <e p="defaults-lt_LT.js.map" t="Include" />
+              <e p="defaults-lt_LT.min.js" t="Include" />
+              <e p="defaults-lv_LV.js" t="Include" />
+              <e p="defaults-lv_LV.js.map" t="Include" />
+              <e p="defaults-lv_LV.min.js" t="Include" />
+              <e p="defaults-nb_NO.js" t="Include" />
+              <e p="defaults-nb_NO.js.map" t="Include" />
+              <e p="defaults-nb_NO.min.js" t="Include" />
+              <e p="defaults-nl_NL.js" t="Include" />
+              <e p="defaults-nl_NL.js.map" t="Include" />
+              <e p="defaults-nl_NL.min.js" t="Include" />
+              <e p="defaults-pl_PL.js" t="Include" />
+              <e p="defaults-pl_PL.js.map" t="Include" />
+              <e p="defaults-pl_PL.min.js" t="Include" />
+              <e p="defaults-pt_BR.js" t="Include" />
+              <e p="defaults-pt_BR.js.map" t="Include" />
+              <e p="defaults-pt_BR.min.js" t="Include" />
+              <e p="defaults-pt_PT.js" t="Include" />
+              <e p="defaults-pt_PT.js.map" t="Include" />
+              <e p="defaults-pt_PT.min.js" t="Include" />
+              <e p="defaults-ro_RO.js" t="Include" />
+              <e p="defaults-ro_RO.js.map" t="Include" />
+              <e p="defaults-ro_RO.min.js" t="Include" />
+              <e p="defaults-ru_RU.js" t="Include" />
+              <e p="defaults-ru_RU.js.map" t="Include" />
+              <e p="defaults-ru_RU.min.js" t="Include" />
+              <e p="defaults-sk_SK.js" t="Include" />
+              <e p="defaults-sk_SK.js.map" t="Include" />
+              <e p="defaults-sk_SK.min.js" t="Include" />
+              <e p="defaults-sl_SI.js" t="Include" />
+              <e p="defaults-sl_SI.js.map" t="Include" />
+              <e p="defaults-sl_SI.min.js" t="Include" />
+              <e p="defaults-sv_SE.js" t="Include" />
+              <e p="defaults-sv_SE.js.map" t="Include" />
+              <e p="defaults-sv_SE.min.js" t="Include" />
+              <e p="defaults-tr_TR.js" t="Include" />
+              <e p="defaults-tr_TR.js.map" t="Include" />
+              <e p="defaults-tr_TR.min.js" t="Include" />
+              <e p="defaults-ua_UA.js" t="Include" />
+              <e p="defaults-ua_UA.js.map" t="Include" />
+              <e p="defaults-ua_UA.min.js" t="Include" />
+              <e p="defaults-vi_VN.js" t="Include" />
+              <e p="defaults-vi_VN.js.map" t="Include" />
+              <e p="defaults-vi_VN.min.js" t="Include" />
+              <e p="defaults-zh_CN.js" t="Include" />
+              <e p="defaults-zh_CN.js.map" t="Include" />
+              <e p="defaults-zh_CN.min.js" t="Include" />
+              <e p="defaults-zh_TW.js" t="Include" />
+              <e p="defaults-zh_TW.js.map" t="Include" />
+              <e p="defaults-zh_TW.min.js" t="Include" />
+            </e>
+            <e p="site.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="LICENSE" t="Include" />
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="jquery" t="Include">
+              <e p="LICENSE.txt" t="Include" />
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="LICENSE.md" t="Include" />
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p="LICENSE.txt" t="Include" />
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="AspNetCoreMvcIdentity.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -1,0 +1,104 @@
+@model AspNetCoreMvcIdentity.Models.ViewModels.Cizelge
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+
+
+@{
+ViewData["Title"] = "Index";
+int KullaniciBolumId = UserManager.GetUserAsync(User).Result.Bolum.BolumId;
+}
+@Html.Raw(ViewBag.UyariMesaji)
+<table class="table table-bordered table-striped">
+  <thead>
+  <tr>
+    <th></th>
+    @foreach(var baslik in Model.OturumTekil.First().Value) {
+      <th>@baslik.Key.SalonAdi</th>
+      }
+    </thead>
+
+    <tbody>
+
+    
+  @foreach(var satir in Model.OturumTekil) {
+  <tr>
+    <td>@satir.Key.OturumTarihveSaati.ToString("MM/dd/yyyy HH:mm")</td>
+    @foreach(var hucre in satir.Value) {
+      @if(hucre.Value != null) {
+      <td class="text-center"><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#sinavmodal_@hucre.Value.SinavId">@hucre.Value.Ders.DersKodu</button></td>
+      }
+      else {
+
+      <td class="text-center"><a class="btn btn-outline-info btn-xs" role="button" href="/Cizelge/SinavEkle/?Oturum=@satir.Key.OturumId&Salon=@hucre.Key.SalonId">EKLE</a></td>
+      }
+    }
+  </tr>
+  }
+</tbody>
+</table>
+
+  @foreach(var satir in Model.OturumTekil) {
+    @foreach(var hucre in satir.Value) {
+    @if(hucre.Value != null) {
+<div class="modal fade" id="sinavmodal_@hucre.Value.SinavId" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped sinavmodal">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <th class="p-10">Dersin Kodu</th>
+                <td>@hucre.Value.Ders.DersKodu</td>
+              </tr>
+              <tr>
+                <th>Dersin Adı</th>
+                <td>@hucre.Value.Ders.DersAdi</td>
+              </tr>
+              <tr>
+                <th>Program</th>
+                <td>@hucre.Value.Ders.Program.ProgramAdi</td>
+              </tr>
+              <tr>
+                <th>Dersin Kodu</th>
+                <td>@hucre.Value.Ders.Program.Bolum.BolumAdi</td>
+              </tr>
+              <tr>
+                <th>Oturum</th>
+                <td>@satir.Key.OturumTarihveSaati.ToString("MM/dd/yyyy HH:mm")</td>
+              </tr>
+              <tr>
+                <th>Salon</th>
+                <td>@hucre.Key.SalonAdi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+        @if(KullaniciBolumId == hucre.Value.Ders.Program.Bolum.BolumId) {
+        @using (Html.BeginForm()) {
+        @Html.Hidden("SinavId", @hucre.Value.SinavId)
+          @Html.Hidden("DersId", @hucre.Value.DersId)
+          @Html.Hidden("OturumId", @hucre.Value.OturumId)
+          @Html.Hidden("SalonId", @hucre.Value.SalonId)
+          <button class="btn btn-primary" type="submit" name="submit" value="Submit">Sil</button>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</div>
+}
+}
+}
+
+
