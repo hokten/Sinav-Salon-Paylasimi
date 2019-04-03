@@ -13340,11 +13340,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/okten/Projeler/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity.csproj",
+      "projectUniqueName": "/home/okten/Projeler/Yedek/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity.csproj",
       "projectName": "AspNetCoreMvcIdentity",
-      "projectPath": "/home/okten/Projeler/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity.csproj",
+      "projectPath": "/home/okten/Projeler/Yedek/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity.csproj",
       "packagesPath": "/home/okten/.nuget/packages/",
-      "outputPath": "/home/okten/Projeler/AspNetCoreMvcIdentity/AspNetCoreMvcIdentity/obj/",
+      "outputPath": "/home/okten/Projeler/Yedek/AspNetCoreMvcIdentity/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/opt/dotnet_core/sdk/NuGetFallbackFolder"
