@@ -1,5 +1,6 @@
 @model IEnumerable<IGrouping<DateTime, IGrouping<DateTime, AspNetCoreMvcIdentity.Models.ViewModels.SinavDTO>>>
 @using Microsoft.AspNetCore.Identity
+@using System.Globalization
 @inject UserManager<ApplicationUser> UserManager
 
 
@@ -8,23 +9,34 @@ ViewData["Title"] = "Index";
 int KullaniciBolumId = UserManager.GetUserAsync(User).Result.Bolum.BolumId;
 DateTime? tarih_satiri = null;
 }
-
-<table border="1">
+@Html.Raw(ViewBag.UyariMesaji == null ? "" : ViewBag.UyariMesaji)
+<table class="table table-bordered table-striped">
 @{
     var i=0;
     foreach(var satir in Model) {
         i = 0;
         foreach(var sinav in satir) {
             if( i == 0 ) {
-                @:<tr><td rowspan="@(satir.Count())">@(satir.Key.ToString())</td>
+                @:<tr><th rowspan="@(satir.Count())">
+                    @(satir.Key.ToString("dd MMMM yyyy", new CultureInfo("tr-TR")))<br />
+                    @(satir.Key.ToString("dddd", new CultureInfo("tr-TR")))
+                @:</th>
             }
             else {
                 @:<tr>
 
             }
-            @:<td>@(sinav.Key.ToString())</td>
+            @:<th>@(sinav.Key.ToString("H:mm"))</th>
             foreach(var si in sinav) {
-                @:<td>@(si.Salon.SalonAdi)</td>
+                @:<td class="text-center">
+                    if(si.Ders == null) {
+                      @Html.ActionLink("EKLE", "SinavEkle", new {Oturum = si.OturumId, Salon = si.SalonId}, new { @class = "btn btn-outline-info btn-sm", role = "button" })
+                        @:<a class="btn btn-outline-info btn-sm" role="button" href="/Cizelge/SinavEkle/">EKLE</a>
+                    }
+                    else {
+                        @:<a href="#" class="BUTTON_WSN" data-toggle="modal" data-target="#sinavmodal_@si.SinavId">@si.Ders.DersKodu</a>
+                    }
+                @:</td>
             }
             @:</tr>
             i++;
@@ -32,4 +44,88 @@ DateTime? tarih_satiri = null;
     }
 }
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@foreach(var satir in Model) {
+    @foreach(var sinav in satir) {
+        @foreach(var si in sinav) {
+            @if(si.Ders != null) {
+
+<div class="modal fade" id="sinavmodal_@si.SinavId" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped sinavmodal">
+            <thead></thead>
+            <tbody>
+              <tr>
+                <th class="p-10">Dersin Kodu</th>
+                <td>@si.Ders.DersKodu</td>
+              </tr>
+              <tr>
+                <th>Dersin Adı</th>
+                <td>@si.Ders.DersAdi</td>
+              </tr>
+              <tr>
+                <th>Program</th>
+                <td>@si.Ders.Program.ProgramAdi</td>
+              </tr>
+              <tr>
+                <th>Dersin Kodu</th>
+                <td>@si.Ders.Program.Bolum.BolumAdi</td>
+              </tr>
+              <tr>
+                <th>Oturum</th>
+                <td>@si.Oturum.OturumTarihveSaati.ToString("MM/dd/yyyy HH:mm")</td>
+              </tr>
+              <tr>
+                <th>Salon</th>
+                <td>@si.Salon.SalonAdi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+        @if(KullaniciBolumId == si.Ders.Program.Bolum.BolumId) {
+        @using (Html.BeginForm()) {
+        @Html.Hidden("SinavId", @si.SinavId)
+          @Html.Hidden("DersId", @si.DersId)
+          @Html.Hidden("OturumId", @si.OturumId)
+          @Html.Hidden("SalonId", @si.SalonId)
+          <button class="btn btn-primary" type="submit" name="submit" value="Submit">Sil</button>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</div>
+}
+}
+}
+}
 

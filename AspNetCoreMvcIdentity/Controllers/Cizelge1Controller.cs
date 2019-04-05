@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
@@ -10,6 +11,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using AspNetCoreMvcIdentity.Models;
@@ -48,6 +50,35 @@ namespace AspNetCoreMvcIdentity.Controllers
       _logger = logger;
       _urlEncoder = urlEncoder;
       _context = context;
+    }
+
+
+    [HttpGet]
+    public async Task<IActionResult> SinavEkle(Sinav sinav)
+    {
+      if (!ModelState.IsValid)
+      {
+        // TODO : Uyari mesajları HTML Helper ile verilecek.
+        TempData["UyariMesaji"] = "<div class=\"alert alert-danger\" role=\"alert\">Oturum zamanı veya salon bilgisi uygunsuz.</div>";
+        return RedirectToAction(nameof(Index));
+      }
+      if(!_context.Oturum.Any(m => m.OturumId == sinav.OturumId) || !_context.Salon.Any(m => m.SalonId == sinav.SalonId)) {
+        TempData["UyariMesaji"] = "<div class=\"alert alert-danger\" role=\"alert\">Oturum zamanı veya salon bulunamadı.</div>";
+        return RedirectToAction(nameof(Index));
+      }
+      if (_context.Sinav.Any(o => o.OturumId == sinav.OturumId && o.SalonId == sinav.SalonId)) {
+         TempData["UyariMesaji"] = "<div class=\"alert alert-danger\" role=\"alert\">Belirtilen oturum zamanı için ilgili salonda zaten sınav var.</div>";
+        return RedirectToAction(nameof(Index));
+      }
+
+
+      ViewData["DersId"] = new SelectList(_context.Ders, "DersId", "DersId");
+      ViewData["DersSorumlusuId"] = new SelectList(_context.OgretimElemani, "OgretimElemaniId", "OgretimElemaniId");
+      ViewData["GozetmenId"] = new SelectList(_context.OgretimElemani, "OgretimElemaniId", "OgretimElemaniId");
+      ViewData["OturumId"] = new SelectList(_context.Oturum.Select( m => new {OturumId = m.OturumId, OturumZamani = m.OturumTarihveSaati.ToString("dd MMMM yyyy dddd HH:mm", new CultureInfo("tr-TR"))}).ToList(), "OturumId", "OturumZamani", sinav.OturumId);
+      ViewData["SalonId"] = new SelectList(_context.Salon, "SalonId", "SalonAdi", sinav.SalonId);
+      
+      return View("~/Views/Cizelge/Create.cshtml", sinav);
     }
 
     [HttpGet]
@@ -114,6 +145,8 @@ namespace AspNetCoreMvcIdentity.Controllers
    
       return View("~/Views/Cizelge/Deneme.cshtml", gg);
     }
+
+
 
 
 
