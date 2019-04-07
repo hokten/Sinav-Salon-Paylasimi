@@ -1,15 +1,37 @@
 @model IEnumerable<IGrouping<DateTime, IGrouping<DateTime, AspNetCoreMvcIdentity.Models.ViewModels.SinavDTO>>>
 @using Microsoft.AspNetCore.Identity
 @using System.Globalization
+
 @inject UserManager<ApplicationUser> UserManager
+@functions {
+    public string UyariKutusu(IDictionary<string,string> UyariDict)
+    {
+      string html = "";
+      if(UyariDict.ContainsKey("Mesaj")) {
+        string tip = UyariDict["Tip"];
+        string mesaj = UyariDict["Mesaj"];
+        html += $@"
+        <div class=""alert alert-{tip} alert-dismissible fade show"" role=""alert"">
+          {mesaj}
+          <button type=""button"" class=""close"" data-dismiss=""alert"" aria-label=""Close"">
+            <span aria-hidden=""true"">&times;</span>
+          </button>
+        </div>";
+      }
+      return html;
+    }
+}
+
 
 
 @{
 ViewData["Title"] = "Index";
 int KullaniciBolumId = UserManager.GetUserAsync(User).Result.Bolum.BolumId;
 DateTime? tarih_satiri = null;
+var gelen = ViewBag.UyariMesaji as Dictionary<string, string>;
 }
-@Html.Raw(ViewBag.UyariMesaji == null ? "" : ViewBag.UyariMesaji)
+
+@Html.Raw(UyariKutusu(ViewBag.UyariMesaji))
 <table class="table table-bordered table-striped">
 @{
     var i=0;
